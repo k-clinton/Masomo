@@ -33,19 +33,19 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#080808] border-t border-white/[0.06] py-20 px-6 md:px-10 xl:px-16 dark">
+    <footer className="bg-[#fafaf6] border-t border-black/[0.06] py-20 px-6 md:px-10 xl:px-16">
       <div className="max-w-[1400px] mx-auto">
         {/* Top */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 pb-16 border-b border-white/[0.06]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 pb-16 border-b border-black/[0.06]">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="font-serif text-2xl text-[#f5f5f0] hover:text-[#c5a059] transition-colors duration-300 block mb-4"
+              className="font-serif text-2xl text-foreground hover:text-accent transition-colors duration-300 block mb-4"
             >
               Mersomo
             </Link>
-            <p className="text-sm text-[#f5f5f0]/50 leading-relaxed max-w-xs">
+            <p className="text-sm text-foreground/50 leading-relaxed max-w-xs">
               Premium academic support and educational services. Helping
               students achieve their full potential.
             </p>
@@ -53,7 +53,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#f5f5f0]/40 mb-5">
+            <p className="text-xs font-medium tracking-[0.15em] uppercase text-foreground/45 mb-5">
               Navigate
             </p>
             <ul className="space-y-3">
@@ -61,7 +61,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#f5f5f0]/60 hover:text-[#f5f5f0] transition-colors duration-200"
+                    className="text-sm text-foreground/65 hover:text-foreground transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -70,7 +70,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-[#f5f5f0]/60 hover:text-[#f5f5f0] transition-colors duration-200"
+                  className="text-sm text-foreground/65 hover:text-foreground transition-colors duration-200"
                 >
                   Contact
                 </Link>
@@ -80,14 +80,14 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#f5f5f0]/40 mb-5">
+            <p className="text-xs font-medium tracking-[0.15em] uppercase text-foreground/45 mb-5">
               Contact
             </p>
             <ul className="space-y-3">
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-sm text-[#f5f5f0]/60 hover:text-[#c5a059] transition-colors duration-200"
+                  className="text-sm text-foreground/65 hover:text-accent transition-colors duration-200"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -95,13 +95,13 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-sm text-[#f5f5f0]/60 hover:text-[#f5f5f0] transition-colors duration-200"
+                  className="text-sm text-foreground/65 hover:text-foreground transition-colors duration-200"
                 >
                   {siteConfig.contact.phone}
                 </a>
               </li>
               <li>
-                <p className="text-sm text-[#f5f5f0]/40">
+                <p className="text-sm text-foreground/45">
                   {siteConfig.contact.location}
                 </p>
               </li>
@@ -111,7 +111,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <p className="text-xs text-[#f5f5f0]/30">
+          <p className="text-xs text-foreground/35">
             &copy; {year} Mersomo. All rights reserved.
           </p>
 
@@ -122,7 +122,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mersomo on X"
-              className="text-[#f5f5f0]/40 hover:text-[#f5f5f0] transition-colors duration-200"
+              className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <XIcon size={16} />
             </a>
@@ -131,7 +131,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mersomo on LinkedIn"
-              className="text-[#f5f5f0]/40 hover:text-[#f5f5f0] transition-colors duration-200"
+              className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <LinkedinIcon size={16} />
             </a>
@@ -140,7 +140,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mersomo on Instagram"
-              className="text-[#f5f5f0]/40 hover:text-[#f5f5f0] transition-colors duration-200"
+              className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <InstagramIcon size={16} />
             </a>
@@ -150,13 +150,13 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <Link
               href="/privacy"
-              className="text-xs text-[#f5f5f0]/30 hover:text-[#f5f5f0]/60 transition-colors duration-200"
+              className="text-xs text-foreground/35 hover:text-foreground/65 transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-xs text-[#f5f5f0]/30 hover:text-[#f5f5f0]/60 transition-colors duration-200"
+              className="text-xs text-foreground/35 hover:text-foreground/65 transition-colors duration-200"
             >
               Terms of Service
             </Link>
