@@ -4,12 +4,12 @@ export const siteConfig = {
   url: "https://mersomo.com",
   ogImage: "https://mersomo.com/og.jpg",
   contact: {
-    email: "hello@mersomo.com",
-    phone: "+1 (555) 123-4567",
+    email: "info@mersomo.com",
+    phone: "+1 (307) 429-3840",
     location: "Global Academic Network",
   },
   socials: {
-    twitter: "https://twitter.com/mersomo",
+    twitter: "https://twitter.com/Mersomo_",
     linkedin: "https://linkedin.com/company/mersomo",
     instagram: "https://instagram.com/mersomo",
   },
