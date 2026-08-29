@@ -4,21 +4,21 @@
 @theme {
   --color-background: #f5f5f0;
   --color-foreground: #1c1c1c;
-  
+
   --color-primary: #f5f5f0;
   --color-primary-foreground: #1c1c1c;
-  
+
   --color-secondary: #fafaf6;
   --color-secondary-foreground: #5a5a5a;
-  
+
   --color-accent: #8c651e;
   --color-accent-hover: #735013;
   --color-accent-foreground: #f5f5f0;
 
   --color-muted: #737373;
-  
+
   --color-border: rgba(0, 0, 0, 0.08);
-  
+
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
@@ -30,21 +30,21 @@
 .dark {
   --color-background: #0a0a0a;
   --color-foreground: #f5f5f0;
-  
+
   --color-primary: #0a0a0a;
   --color-primary-foreground: #f5f5f0;
-  
+
   --color-secondary: #111111;
   --color-secondary-foreground: #a3a3a3;
-  
+
   --color-accent: #c5a059;
   --color-accent-hover: #b38d47;
   --color-accent-foreground: #0a0a0a;
 
   --color-muted: #a3a3a3;
-  
+
   --color-border: rgba(255, 255, 255, 0.08);
-  
+
   color-scheme: dark;
 }
 
@@ -57,33 +57,42 @@ body {
 }
 
 /* Dynamic overrides for Tailwind arbitrary gold classes */
-.text-\[\#c5a059\] {
+.text-\[\#eab308\] {
   color: var(--color-accent) !important;
 }
+
 .hover\:text-\[\#c5a059\]:hover {
   color: var(--color-accent) !important;
 }
+
 .focus\:border-\[\#c5a059\]:focus {
   border-color: var(--color-accent) !important;
 }
+
 .focus-visible\:ring-\[\#c5a059\]:focus-visible {
   --tw-ring-color: var(--color-accent) !important;
 }
+
 .hover\:border-\[\#c5a059\]:hover {
   border-color: var(--color-accent) !important;
 }
+
 .group:hover .group-hover\:text-\[\#c5a059\] {
   color: var(--color-accent) !important;
 }
+
 .bg-\[\#c5a059\] {
   background-color: var(--color-accent) !important;
 }
+
 .hover\:bg-\[\#b38d47\]:hover {
   background-color: var(--color-accent-hover) !important;
 }
+
 .text-accent {
   color: var(--color-accent) !important;
 }
+
 .hover\:text-accent:hover {
   color: var(--color-accent) !important;
 }
@@ -92,9 +101,11 @@ body {
 .text-\[\#c5a059\]\/20 {
   color: color-mix(in srgb, var(--color-accent) 20%, transparent) !important;
 }
+
 .text-\[\#c5a059\]\/30 {
   color: color-mix(in srgb, var(--color-accent) 30%, transparent) !important;
 }
+
 .bg-\[\#c5a059\]\/20 {
   background-color: color-mix(in srgb, var(--color-accent) 20%, transparent) !important;
 }
