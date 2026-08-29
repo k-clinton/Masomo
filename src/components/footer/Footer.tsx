@@ -46,8 +46,10 @@ export function Footer() {
               Mersomo
             </Link>
             <p className="text-sm text-foreground/50 leading-relaxed max-w-xs">
-              Premium academic support and educational services. Helping
-              students achieve their full potential.
+              Premium academic support for students who want to
+              learn, grow, and achieve their full potential. We provide guidance,
+              resources, and educational services without completing graded work on your behalf.
+
             </p>
           </div>
 
