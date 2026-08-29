@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const projectImages: Record<string, string> = {
   "oxford-distinction":
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+    "https://res.cloudinary.com/dyysl5jbc/image/upload/v1787996099/Mersomo-LLC_vj9aqe.jpg",
   "stem-accelerator":
     "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=900&q=80&auto=format&fit=crop",
   "dissertation-success":
