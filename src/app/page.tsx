@@ -22,9 +22,9 @@ const jsonLd = {
   url: "https://mersomo.com",
   description:
     "Mersomo provides premium academic tutoring, essay support, dissertation guidance, and exam preparation for ambitious students at every level.",
-  email: "hello@mersomo.com",
+  email: "info@mersomo.com",
   sameAs: [
-    "https://twitter.com/mersomo",
+    "https://twitter.com/Mersomo_",
     "https://linkedin.com/company/mersomo",
     "https://instagram.com/mersomo",
   ],

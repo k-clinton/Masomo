@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const projectImages: Record<string, string> = {
   "oxford-distinction":
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+    "https://res.cloudinary.com/dyysl5jbc/image/upload/v1787996099/Mersomo-LLC_vj9aqe.jpg",
   "stem-accelerator":
     "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=900&q=80&auto=format&fit=crop",
   "dissertation-success":
@@ -50,9 +50,8 @@ export default function WorkPage() {
             <Reveal key={project.id} delay={0.05}>
               <article
                 id={project.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                  i % 2 === 1 ? "lg:[direction:rtl]" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:[direction:rtl]" : ""
+                  }`}
               >
                 <div className={`relative aspect-[4/3] ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
                   <Image
@@ -61,6 +60,7 @@ export default function WorkPage() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <div className={i % 2 === 1 ? "lg:[direction:ltr]" : ""}>
