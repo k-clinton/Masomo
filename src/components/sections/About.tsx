@@ -20,7 +20,7 @@ export function About() {
               {/* Primary image */}
               <div className="relative aspect-[4/5] w-full max-w-md">
                 <Image
-                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80&auto=format&fit=crop"
+                  src="https://res.cloudinary.com/dyysl5jbc/image/upload/v1787996101/Mersomo-LLC-Image_bsndlb.jpg"
                   alt="Student writing at desk — focused academic work"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -30,7 +30,7 @@ export function About() {
               {/* Secondary accent image */}
               <div className="absolute -bottom-8 -right-6 md:-right-12 w-48 md:w-64 aspect-[4/3] border-4 border-background">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80&auto=format&fit=crop"
                   alt="Tutor and student in a one-on-one session"
                   fill
                   sizes="(max-width: 768px) 192px, 256px"
