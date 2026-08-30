@@ -26,7 +26,7 @@ export function QuoteOption({
         "w-full text-left p-5 border text-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent relative overflow-hidden",
         selected
           ? "border-accent bg-accent/[0.08] text-foreground"
-          : "border-foreground/20 bg-[#fafaf6] dark:bg-[#1a1a1a] hover:border-accent/50 hover:bg-accent/[0.02]",
+          : "border-foreground/20 bg-transparent hover:border-accent/50 hover:bg-accent/[0.04]",
         className
       )}
       aria-pressed={selected}
