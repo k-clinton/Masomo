@@ -66,7 +66,7 @@ export function QuoteResult({ state }: QuoteResultProps) {
   return (
     <div className="space-y-6">
       {/* Estimation Callout */}
-      <div className="bg-[#fafaf6] dark:bg-[#111111] border border-[#c5a059]/30 p-8 text-center relative overflow-hidden">
+      <div className="bg-[transparent] dark:bg-[transparent] border border-[#c5a059]/30 p-8 text-center relative overflow-hidden">
         {/* Subtle decorative background detail */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]" />
 
@@ -105,7 +105,7 @@ export function QuoteResult({ state }: QuoteResultProps) {
         </ul>
       </div>
 
-      <div className="bg-[#fafaf6] dark:bg-[#111111] p-4 text-[11px] text-foreground/40 leading-relaxed border border-foreground/5">
+      <div className="bg-[transparent] dark:bg-[transparent] p-4 text-[11px] text-foreground/40 leading-relaxed border border-foreground/5">
         <strong>Important Notice:</strong> This cost is a preliminary calculation estimate. The final quote will be confirmed by an academic coordinator after reviewing your course syllabus and specific portal requirements. Payments are structured in weekly installments after your grades are posted. We guarantee an A or B grade.
       </div>
     </div>
