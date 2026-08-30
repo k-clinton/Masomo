@@ -40,7 +40,7 @@ export function QuoteSummary({ state, onEditStep }: QuoteSummaryProps) {
 
   return (
     <div className="space-y-4">
-      <div className="bg-[#fafaf6] dark:bg-[#1a1a1a] border border-foreground/15 p-5 rounded-none">
+      <div className="bg-[transparentS] dark:bg-[transparent] border border-foreground/15 p-5 rounded-none">
         <h4 className="font-serif text-base font-semibold mb-3 border-b border-foreground/15 pb-2 text-foreground">
           Course Specifications
         </h4>
@@ -56,7 +56,7 @@ export function QuoteSummary({ state, onEditStep }: QuoteSummaryProps) {
         </div>
       </div>
 
-      <div className="bg-[#fafaf6] dark:bg-[#1a1a1a] border border-foreground/15 p-5 rounded-none">
+      <div className="bg-[transparentS] dark:bg-[transparent] border border-foreground/15 p-5 rounded-none">
         <h4 className="font-serif text-base font-semibold mb-3 border-b border-foreground/15 pb-2 text-foreground">
           Service & Scope Details
         </h4>
@@ -119,7 +119,7 @@ export function QuoteSummary({ state, onEditStep }: QuoteSummaryProps) {
       </div>
 
       {(state.negotiationRequested || state.proposedBudget) && (
-        <div className="bg-[#fafaf6] dark:bg-[#1a1a1a] border border-foreground/15 p-5 rounded-none">
+        <div className="bg-[transparent] dark:bg-[transparent] border border-foreground/15 p-5 rounded-none">
           <h4 className="font-serif text-base font-semibold mb-3 border-b border-foreground/15 pb-2 text-foreground">
             Negotiation & Budget
           </h4>
