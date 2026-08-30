@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/footer/Footer";
+import { ChatLauncher } from "@/components/chat/ChatLauncher";
+import { ConditionalLayoutWrapper } from "@/components/navigation/ConditionalLayoutWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,9 +58,13 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-background text-foreground flex flex-col antialiased">
-        <Navbar />
-        {children}
-        <Footer />
+        <ConditionalLayoutWrapper
+          navbar={<Navbar />}
+          footer={<Footer />}
+          chatLauncher={<ChatLauncher />}
+        >
+          {children}
+        </ConditionalLayoutWrapper>
       </body>
     </html>
   );
