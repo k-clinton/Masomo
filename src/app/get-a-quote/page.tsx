@@ -16,7 +16,7 @@ export default function GetAQuotePage() {
     <main>
       {/* Editorial Header */}
       <section className="py-20 md:py-28 px-6 md:px-10 xl:px-16 border-b border-black/[0.06] bg-[#fafaf6] dark:bg-[#0a0a0a]">
-        <div className="max-w-[1400px] mx-auto text-center md:text-left">
+        <div className="max-w-[1400px] mx-auto text-left">
           <Reveal>
             <SectionLabel>Pricing Calculator</SectionLabel>
           </Reveal>
