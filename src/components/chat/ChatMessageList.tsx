@@ -29,7 +29,7 @@ export function ChatMessageList({
   return (
     <div
       ref={containerRef}
-      className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 bg-background dark:bg-[#0a0a0a] min-h-[350px] scroll-smooth"
+      className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 bg-background min-h-0 scroll-smooth"
       style={{ scrollbarWidth: "thin" }}
     >
       <div className="max-w-[700px] mx-auto w-full">
@@ -42,7 +42,7 @@ export function ChatMessageList({
         {isTyping && (
           <div className="flex w-full justify-start mb-4">
             <div>
-              <span className="block text-[9px] uppercase tracking-wider text-foreground/30 font-medium mb-1 pl-1">
+              <span className="block text-[10px] uppercase tracking-wider text-[#c5a059] font-semibold mb-1 pl-1">
                 Mersomo Advisor
               </span>
               <ChatTypingIndicator />
@@ -52,7 +52,7 @@ export function ChatMessageList({
 
         {/* Suggested Questions */}
         {showSuggestions && (
-          <div className="pt-6 border-t border-foreground/5 mt-8 animate-[fadeIn_0.5s_ease-out]">
+          <div className="pt-6 border-t border-foreground/15 mt-8 animate-[fadeIn_0.5s_ease-out]">
             <ChatSuggestions onSelectPrompt={onSelectPrompt} />
           </div>
         )}

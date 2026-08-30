@@ -102,16 +102,16 @@ function ProjectCard({ project, images, aspectClass, wide }: ProjectCardProps) {
             <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-[#c5a059] mb-2">
               {project.category}
             </p>
-            <h3 className="font-serif text-[clamp(18px,2vw,26px)] font-normal text-foreground leading-snug">
+            <h3 className="font-serif text-[clamp(18px,2vw,26px)] font-normal text-[#c5a059] group-hover:text-white transition-colors duration-300 leading-snug">
               {project.title}
             </h3>
           </div>
           {wide && (
-            <p className="text-sm text-foreground/50 max-w-xs mt-3 md:mt-0 leading-relaxed hidden md:block">
+            <p className="text-sm text-[#c5a059]/90 group-hover:text-white/90 transition-colors duration-300 max-w-xs mt-3 md:mt-0 leading-relaxed hidden md:block font-sans">
               {project.description}
             </p>
           )}
-          <div className="mt-3 md:mt-0 flex items-center gap-2 text-xs text-foreground/50 group-hover:text-[#c5a059] transition-colors duration-300">
+          <div className="mt-3 md:mt-0 flex items-center gap-2 text-xs text-[#c5a059] group-hover:text-white transition-colors duration-300 font-sans">
             <span>View</span>
             <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-1" />
           </div>

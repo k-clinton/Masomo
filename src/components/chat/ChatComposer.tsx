@@ -48,7 +48,7 @@ export function ChatComposer({ onSend, disabled }: ChatComposerProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-end gap-3 border-t border-foreground/10 p-4 bg-background dark:bg-[#0a0a0a]"
+      className="flex items-end gap-3 border-t border-foreground/15 p-4 bg-background"
     >
       <div className="flex-1 relative">
         <textarea
@@ -58,7 +58,7 @@ export function ChatComposer({ onSend, disabled }: ChatComposerProps) {
           onChange={(e) => setText(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Ask a question about our pricing, timelines, or subjects..."
-          className="w-full bg-[#fafaf6] dark:bg-[#111111] border border-foreground/10 focus:border-accent outline-none py-3 pl-4 pr-12 text-sm text-foreground placeholder:text-foreground/30 transition-all duration-300 resize-none font-sans min-h-[46px] max-h-[120px] rounded-none focus-visible:ring-1 focus-visible:ring-accent"
+          className="w-full bg-secondary border border-foreground/20 focus:border-accent outline-none py-3 pl-4 pr-12 text-sm text-foreground placeholder:text-foreground/60 transition-all duration-300 resize-none font-sans font-medium min-h-[46px] max-h-[120px] rounded-none focus-visible:ring-1 focus-visible:ring-accent"
           style={{ height: "auto" }}
           disabled={disabled}
           aria-label="Write a message"
@@ -69,7 +69,7 @@ export function ChatComposer({ onSend, disabled }: ChatComposerProps) {
         disabled={!text.trim() || disabled}
         variant="premium"
         size="icon"
-        className="flex-shrink-0 w-[46px] h-[46px] bg-accent hover:bg-accent-hover text-accent-foreground rounded-none border-none disabled:opacity-30 disabled:bg-foreground/5 disabled:text-foreground/30 flex items-center justify-center transition-all duration-300"
+        className="flex-shrink-0 w-[46px] h-[46px] bg-accent hover:bg-accent-hover text-accent-foreground rounded-none border-none disabled:opacity-30 disabled:bg-foreground/10 disabled:text-foreground/40 flex items-center justify-center transition-all duration-300"
         aria-label="Send message"
       >
         <Send size={15} />

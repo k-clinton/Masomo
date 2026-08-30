@@ -70,7 +70,7 @@ export default function WorkPage() {
                   <h2 className="font-serif text-[clamp(28px,3vw,44px)] font-normal text-foreground mb-5 leading-tight">
                     {project.title}
                   </h2>
-                  <p className="text-sm text-foreground/50 leading-relaxed max-w-md">
+                  <p className="text-sm text-foreground/80 leading-relaxed max-w-md font-sans font-medium">
                     {project.description}
                   </p>
                 </div>
