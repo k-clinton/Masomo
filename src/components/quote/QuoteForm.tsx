@@ -1,0 +1,185 @@
+import React, { useState } from "react";
+import { Send, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { QuoteState } from "@/lib/pricing";
+
+interface QuoteFormProps {
+  state: QuoteState;
+  updateState: (fields: Partial<QuoteState>) => void;
+  onSubmitSuccess: () => void;
+}
+
+export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProps) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState(state.courseName ? `I need assistance with my course: ${state.courseName}` : "");
+  
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const validate = () => {
+    const tempErrors: Record<string, string> = {};
+    if (!name.trim()) tempErrors.name = "Full name is required.";
+    
+    if (!email.trim()) {
+      tempErrors.email = "Email address is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      tempErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!phone.trim()) {
+      tempErrors.phone = "Phone number is required.";
+    } else if (!/^\+?[\d\s-]{7,15}$/.test(phone)) {
+      tempErrors.phone = "Please enter a valid phone number (including country code).";
+    }
+
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    setLoading(true);
+    setErrorMsg("");
+
+    try {
+      // Simulate API submission (as requested, no real external API)
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+
+      setSuccess(true);
+      onSubmitSuccess();
+    } catch (err) {
+      setErrorMsg("Something went wrong during submission. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (success) {
+    return (
+      <div className="flex flex-col items-center justify-center text-center py-10 px-4 min-h-[300px]">
+        <CheckCircle2 className="text-[#c5a059] w-12 h-12 mb-6 stroke-[1.25]" />
+        <h3 className="font-serif text-[28px] font-normal mb-4 leading-tight">
+          Request Received
+        </h3>
+        <p className="text-sm text-foreground/50 max-w-sm leading-relaxed mb-6 font-sans">
+          Thank you, <strong className="text-foreground">{name}</strong>. We have received your quote details and will review them shortly. An academic coordinator will contact you at <strong className="text-foreground">{email}</strong> or <strong className="text-foreground">{phone}</strong> within one business day.
+        </p>
+        <div className="bg-[#fafaf6] dark:bg-[#111111] p-4 text-[10px] uppercase tracking-wider text-foreground/40 border border-foreground/5 font-sans">
+          No upfront fees. Guarantee A or B.
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto">
+      {errorMsg && (
+        <div className="p-4 bg-red-500/10 border border-red-500/20 text-xs text-red-500 font-sans" role="alert">
+          {errorMsg}
+        </div>
+      )}
+
+      {/* Name */}
+      <div>
+        <label htmlFor="quote-name" className="text-[10px] tracking-wider uppercase text-foreground/40 font-medium block mb-2">
+          Full Name *
+        </label>
+        <input
+          id="quote-name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="E.g., John Doe"
+          className="w-full bg-transparent border-b border-foreground/10 focus:border-accent outline-none py-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-300 font-sans"
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "quote-name-error" : undefined}
+          required
+        />
+        {errors.name && (
+          <p id="quote-name-error" className="text-xs text-red-500 font-medium mt-1.5" role="alert">
+            {errors.name}
+          </p>
+        )}
+      </div>
+
+      {/* Email */}
+      <div>
+        <label htmlFor="quote-email" className="text-[10px] tracking-wider uppercase text-foreground/40 font-medium block mb-2">
+          Email Address *
+        </label>
+        <input
+          id="quote-email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E.g., john@example.com"
+          className="w-full bg-transparent border-b border-foreground/10 focus:border-accent outline-none py-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-300 font-sans"
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "quote-email-error" : undefined}
+          required
+        />
+        {errors.email && (
+          <p id="quote-email-error" className="text-xs text-red-500 font-medium mt-1.5" role="alert">
+            {errors.email}
+          </p>
+        )}
+      </div>
+
+      {/* Phone */}
+      <div>
+        <label htmlFor="quote-phone" className="text-[10px] tracking-wider uppercase text-foreground/40 font-medium block mb-2">
+          Phone Number *
+        </label>
+        <input
+          id="quote-phone"
+          type="tel"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder="E.g., +1 (555) 019-2834"
+          className="w-full bg-transparent border-b border-foreground/10 focus:border-accent outline-none py-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-300 font-sans"
+          aria-invalid={!!errors.phone}
+          aria-describedby={errors.phone ? "quote-phone-error" : undefined}
+          required
+        />
+        {errors.phone && (
+          <p id="quote-phone-error" className="text-xs text-red-500 font-medium mt-1.5" role="alert">
+            {errors.phone}
+          </p>
+        )}
+      </div>
+
+      {/* Description */}
+      <div>
+        <label htmlFor="quote-description" className="text-[10px] tracking-wider uppercase text-foreground/40 font-medium block mb-2">
+          Project / Course Description (Optional)
+        </label>
+        <textarea
+          id="quote-description"
+          rows={3}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Provide any additional details or guidelines about your class assignments..."
+          className="w-full bg-transparent border border-foreground/10 focus:border-accent outline-none p-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-300 resize-none font-sans"
+        />
+      </div>
+
+      <div className="pt-4 flex justify-center">
+        <Button
+          type="submit"
+          disabled={loading}
+          variant="premium"
+          className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 h-12 px-8 uppercase tracking-wider text-xs font-semibold rounded-none bg-accent hover:bg-accent-hover text-accent-foreground border-none transition-all duration-300"
+        >
+          {loading ? "Submitting..." : "Request This Quote"}
+          <Send size={12} />
+        </Button>
+      </div>
+    </form>
+  );
+}
