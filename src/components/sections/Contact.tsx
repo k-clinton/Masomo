@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Send } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Reveal } from "@/components/ui/Reveal";
@@ -123,6 +124,20 @@ export function Contact() {
                   <p className="text-foreground/50 text-sm">
                     {siteConfig.contact.location}
                   </p>
+                </div>
+                <div className="pt-8 border-t border-foreground/10 mt-8">
+                  <h4 className="font-serif text-lg font-normal mb-2 text-foreground leading-snug">
+                    Have a question?
+                  </h4>
+                  <p className="text-sm text-foreground/50 leading-relaxed max-w-xs mb-5 font-sans">
+                    Speak with us directly and get help with your project.
+                  </p>
+                  <Link
+                    href="/chat"
+                    className="inline-flex items-center gap-2 border border-foreground/20 hover:border-[#c5a059] text-foreground hover:text-[#c5a059] px-5 py-2.5 transition-all duration-300 text-xs font-semibold uppercase tracking-wider font-sans rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c5a059]"
+                  >
+                    Chat with us
+                  </Link>
                 </div>
               </div>
             </Reveal>
