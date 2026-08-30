@@ -80,10 +80,10 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-6">
             <Link
-              href="/contact"
+              href="/get-a-quote"
               className="text-sm font-medium border border-foreground/20 hover:border-[#c5a059] text-foreground hover:text-[#c5a059] px-5 py-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c5a059]"
             >
-              Start a Project
+              Get a Quote
             </Link>
           </div>
 
@@ -162,11 +162,11 @@ export function Navbar() {
                 className="mt-12"
               >
                 <Link
-                  href="/contact"
+                  href="/get-a-quote"
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex text-sm font-medium border border-white/20 hover:border-[#c5a059] text-foreground hover:text-[#c5a059] px-6 py-3 transition-all duration-300"
                 >
-                  Start a Project
+                  Get a Quote
                 </Link>
               </motion.div>
             </div>
