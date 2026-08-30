@@ -21,14 +21,14 @@ export default function GetAQuotePage() {
             <SectionLabel>Pricing Calculator</SectionLabel>
           </Reveal>
           <Reveal delay={0.1}>
-            <SectionHeading size="xl" className="max-w-3xl leading-tight">
+            <SectionHeading size="xl" className="max-w-3xl leading-tight text-white">
               Structure your
               <br />
-              <span className="italic text-foreground/60">academic support plan.</span>
+              <span className="italic text-white/70">academic support plan.</span>
             </SectionHeading>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 text-sm text-foreground/50 max-w-lg leading-relaxed font-sans">
+            <p className="mt-6 text-sm text-white/80 max-w-lg leading-relaxed font-sans">
               Enter your course parameters to calculate a transparent price range for our academic services. Adjust components to fit your study schedule and requirements.
             </p>
           </Reveal>
