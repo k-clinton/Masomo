@@ -19,8 +19,6 @@ export const WELCOME_MESSAGE = {
 };
 
 const RESPONSES: Record<string, string> = {
-  "how much does a website cost?":
-    "While Mersomo focuses on premium academic support, tutoring, and research consultation, our custom program division can coordinate technical and digital portfolio work. For our core writing, tutoring, or dissertation guidance, you can get a tailored estimate instantly using our Quote Calculator at /get-a-quote.",
   "what services do you offer?":
     "We provide top-tier academic tutoring, essay & assignment support, dissertation & thesis consulting, exam preparation, and academic language support. All programmes are custom-tailored to your syllabus.",
   "i have a project idea":
