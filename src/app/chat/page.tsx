@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ChatPage() {
   return (
-    <main className="pt-[72px] flex-1 flex flex-col justify-center bg-background py-8 md:py-16">
+    <main className="flex-1 flex flex-col justify-center bg-background py-8 md:py-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 xl:px-16 w-full flex-1 flex flex-col justify-center">
         {/* Intro header */}
         <div className="mb-6 text-center max-w-md mx-auto">
