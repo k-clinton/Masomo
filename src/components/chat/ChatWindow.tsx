@@ -50,9 +50,11 @@ export function ChatWindow({ embedded = false }: ChatWindowProps) {
   };
 
   return (
-    <div className={`flex flex-col h-full bg-background dark:bg-[#0a0a0a] border border-foreground/10 overflow-hidden ${
-      embedded ? "w-full" : "max-w-[800px] mx-auto w-full shadow-lg"
-    }`} style={{ height: "calc(100vh - 120px)", minHeight: "500px" }}>
+    <div
+      className={`flex flex-col bg-background border-2 border-[#c5a059] ring-1 ring-[#c5a059]/20 overflow-hidden ${
+        embedded ? "w-full h-full" : "max-w-[750px] mx-auto w-full shadow-2xl h-[calc(100vh-160px)] max-h-[650px] min-h-[420px]"
+      }`}
+    >
       {/* Header */}
       <ChatHeader onClear={handleClear} showClear={messages.length > 1} />
 

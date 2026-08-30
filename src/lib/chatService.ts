@@ -6,7 +6,6 @@ export interface Message {
 }
 
 export const SUGGESTED_PROMPTS = [
-  "How much does a website cost?",
   "What services do you offer?",
   "I have a project idea",
   "I need help choosing a service",

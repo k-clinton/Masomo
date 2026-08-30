@@ -24,24 +24,24 @@ export function ChatMessage({ message }: ChatMessageProps) {
     >
       <div
         className={cn(
-          "max-w-[75%] md:max-w-[65%] p-4 border transition-all duration-300 font-sans",
+          "max-w-[75%] md:max-w-[65%] p-4 border transition-all duration-300 font-sans shadow-sm",
           isVisitor
-            ? "bg-accent/10 border-accent/25 text-foreground rounded-none"
-            : "bg-[#fafaf6] dark:bg-[#111111] border-foreground/5 text-foreground/80 rounded-none"
+            ? "bg-accent/20 border-accent/40 text-foreground rounded-none"
+            : "bg-secondary border-foreground/15 text-foreground rounded-none"
         )}
       >
         {/* Sender Label */}
-        <span className="block text-[9px] uppercase tracking-wider text-foreground/30 font-medium mb-1">
+        <span className="block text-[10px] uppercase tracking-wider text-[#c5a059] font-semibold mb-1">
           {isVisitor ? "You" : "Mersomo Advisor"}
         </span>
 
         {/* Message Text */}
-        <p className="text-xs leading-relaxed whitespace-pre-line text-foreground select-text">
+        <p className="text-xs md:text-sm leading-relaxed whitespace-pre-line text-foreground font-medium select-text">
           {message.text}
         </p>
 
         {/* Timestamp */}
-        <span className="block text-[8px] text-foreground/35 text-right mt-1.5 font-sans">
+        <span className="block text-[9px] text-foreground/75 text-right mt-1.5 font-sans font-medium">
           {timeStr}
         </span>
       </div>
