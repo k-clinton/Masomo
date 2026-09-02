@@ -28,7 +28,7 @@ export function Story() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-[17px] text-foreground/60 leading-relaxed mb-6 max-w-lg">
-                Mersomo was founded on a simple but powerful belief: that
+                Harnes 24/7 was founded on a simple but powerful belief: that
                 exceptional academic support should not be a privilege of the
                 few. We set out to build a network of dedicated educators and
                 subject experts who could give every student the attention,
@@ -36,7 +36,7 @@ export function Story() {
               </p>
               <p className="text-[16px] text-foreground/50 leading-relaxed mb-6 max-w-lg">
                 From our earliest days, we have been committed to matching
-                students with the right specialist — not just any tutor — and
+                students with the right specialist not just any tutor and
                 to holding ourselves accountable to measurable, meaningful
                 outcomes.
               </p>
@@ -58,6 +58,7 @@ export function Story() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  loading="eager"
                 />
               </div>
               <div className="relative aspect-square">
@@ -67,6 +68,7 @@ export function Story() {
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
+                  loading="eager"
                 />
               </div>
               <div className="relative aspect-square">
@@ -76,6 +78,7 @@ export function Story() {
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
+                  loading="eager"
                 />
               </div>
             </div>
