@@ -83,7 +83,7 @@ export function QuoteResult({ state }: QuoteResultProps) {
 
         {state.negotiationRequested && state.proposedBudget && (
           <div className="mt-4 pt-4 border-t border-foreground/5 text-xs text-[#c5a059] font-medium">
-            Negotiation requested — Proposed Budget: ${state.proposedBudget} USD
+            Negotiation requested Proposed Budget: ${state.proposedBudget} USD
           </div>
         )}
       </div>

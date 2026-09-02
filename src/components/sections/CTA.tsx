@@ -14,7 +14,7 @@ export function CTA() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1800&q=80&auto=format&fit=crop"
-          alt="Atmospheric reading room — an invitation to academic excellence"
+          alt="Atmospheric reading room an invitation to academic excellence"
           fill
           sizes="100vw"
           className="object-cover object-center"
