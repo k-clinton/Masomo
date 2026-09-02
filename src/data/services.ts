@@ -12,7 +12,7 @@ export const services: Service[] = [
     number: "01",
     name: "Academic Tutoring",
     description:
-      "One-on-one and group tutoring sessions across all academic levels — from secondary school to postgraduate study.",
+      "One-on-one and group tutoring sessions across all academic level from secondary school to postgraduate study.",
     details: [
       "Subject-specific expert tutors",
       "Personalised learning plans",
@@ -43,7 +43,7 @@ export const services: Service[] = [
       "Research proposal development",
       "Literature review guidance",
       "Data analysis support",
-      "Chapter-by-chapter feedback",
+      "Chapter by chapter feedback",
     ],
   },
   {

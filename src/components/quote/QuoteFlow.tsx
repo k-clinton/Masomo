@@ -137,7 +137,7 @@ export function QuoteFlow() {
     },
     {
       id: "self-paced",
-      title: "Self-Paced Class",
+      title: "Self Paced Class",
       description: "Does your class allow you to complete assignments at your own pace?",
       check: (_s: QuoteState) => true,
       validate: () => "",
