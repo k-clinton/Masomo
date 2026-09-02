@@ -20,7 +20,7 @@ export const WELCOME_MESSAGE = {
 
 const RESPONSES: Record<string, string> = {
   "what services do you offer?":
-    "We provide top-tier academic tutoring, essay & assignment support, dissertation & thesis consulting, exam preparation, and academic language support. All programmes are custom-tailored to your syllabus.",
+    "We provide top tier academic tutoring, essay & assignment support, dissertation & thesis consulting, exam preparation, and academic language support. All programmes are custom-tailored to your syllabus.",
   "i have a project idea":
     "That is exciting! Whether it is a research project, a dissertation proposal, or a custom course syllabus, our team can help you design and execute it. What subject and educational level (e.g. Undergraduate, Master's) is the project for?",
   "i need help choosing a service":
