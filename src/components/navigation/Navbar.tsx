@@ -58,9 +58,9 @@ export function Navbar() {
           <Link
             href="/"
             className="font-serif text-2xl tracking-tight text-foreground hover:text-[#c5a059] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c5a059]"
-            aria-label="Mersomo — Home"
+            aria-label="Harnes 24/7 Home"
           >
-            Mersomo
+            Harnes 24/7
           </Link>
 
           {/* Desktop Nav */}
