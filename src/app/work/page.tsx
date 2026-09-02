@@ -9,8 +9,8 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Explore Mersomo's selected programmes and case studies — from Oxford preparation to postgraduate dissertation support.",
-  alternates: { canonical: "https://mersomo.com/work" },
+    "Explore Harnes 24/7's selected programmes and case studies — from Oxford preparation to postgraduate dissertation support.",
+  alternates: { canonical: "https://harnes247.com/work" },
 };
 
 const projectImages: Record<string, string> = {
@@ -56,7 +56,7 @@ export default function WorkPage() {
                 <div className={`relative aspect-[4/3] ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
                   <Image
                     src={projectImages[project.id]}
-                    alt={`${project.title} — Mersomo programme`}
+                    alt={`${project.title} — Harnes 24/7 programme`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"

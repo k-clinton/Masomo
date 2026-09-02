@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://mersomo.com/sitemap.xml",
+    sitemap: "https://harnes247.com/sitemap.xml",
   };
 }

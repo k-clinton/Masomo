@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Learn about Harnes 24/7, a premium academic support network dedicated to helping students achieve their full potential.",
-  alternates: { canonical: "https://mersomo.com/about" },
+  alternates: { canonical: "https://harnes247.com/about" },
 };
 
 export default function AboutPage() {
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 <p>
                   We believe every student, regardless of background,
                   institution, or prior attainment deserves access to the
-                  highest quality academic guidance. Mersomo was founded to make
+                  highest quality academic guidance. Harnes 24/7 was founded to make
                   that belief a reality.
                 </p>
                 <p>

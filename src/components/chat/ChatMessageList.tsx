@@ -43,7 +43,7 @@ export function ChatMessageList({
           <div className="flex w-full justify-start mb-4">
             <div>
               <span className="block text-[10px] uppercase tracking-wider text-[#c5a059] font-semibold mb-1 pl-1">
-                Mersomo Advisor
+                Harnes 24/7 Advisor
               </span>
               <ChatTypingIndicator />
             </div>

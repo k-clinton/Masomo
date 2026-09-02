@@ -120,7 +120,7 @@ export function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="font-serif text-2xl tracking-tight text-foreground"
               >
-                Mersomo
+                Harnes 24/7
               </Link>
               <button
                 onClick={() => setMenuOpen(false)}

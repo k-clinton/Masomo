@@ -7,8 +7,8 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Insights",
   description:
-    "Academic insights, study guides, and expert advice from the Mersomo team.",
-  alternates: { canonical: "https://mersomo.com/insights" },
+    "Academic insights, study guides, and expert advice from the Harnes 24/7 team.",
+  alternates: { canonical: "https://harnes247.com/insights" },
 };
 
 export default function InsightsPage() {

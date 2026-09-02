@@ -20,24 +20,24 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mersomo | Premium Academic Support",
-    template: "%s | Mersomo",
+    default: "Harnes 24/7 | Premium Academic Support",
+    template: "%s | Harnes 24/7",
   },
   description:
-    "Mersomo provides premium academic tutoring, essay support, dissertation guidance, and exam preparation for ambitious students at every level.",
-  metadataBase: new URL("https://mersomo.com"),
+    "Harnes 24/7 provides premium academic tutoring, essay support, dissertation guidance, and exam preparation for ambitious students at every level.",
+  metadataBase: new URL("https://harnes247.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mersomo.com",
-    siteName: "Mersomo",
-    title: "Mersomo | Premium Academic Support",
+    url: "https://harnes247.com",
+    siteName: "Harnes 24/7",
+    title: "Harnes 24/7 | Premium Academic Support",
     description:
       "Expert tutoring, essay support, and dissertation guidance — tailored to help every student reach their full potential.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mersomo | Premium Academic Support",
+    title: "Harnes 24/7 | Premium Academic Support",
     description:
       "Expert tutoring, essay support, and dissertation guidance — tailored to help every student reach their full potential.",
   },

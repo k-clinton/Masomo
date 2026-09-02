@@ -23,7 +23,7 @@ export function ChatHeader({ onClear, showClear = true }: ChatHeaderProps) {
             href="/"
             className="font-serif text-sm md:text-base font-semibold tracking-tight text-foreground hover:text-accent transition-colors duration-200"
           >
-            Mersomo Assistant
+            Harnes 24/7 Assistant
           </Link>
           <div className="flex items-center gap-1.5 mt-0.5">
             <span className="text-xs text-foreground/80 font-sans leading-none font-medium">

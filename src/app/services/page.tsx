@@ -8,8 +8,8 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Mersomo's academic support services: tutoring, essay writing, dissertation guidance, exam preparation, and language support.",
-  alternates: { canonical: "https://mersomo.com/services" },
+    "Explore Harnes 24/7's academic support services: tutoring, essay writing, dissertation guidance, exam preparation, and language support.",
+  alternates: { canonical: "https://harnes247.com/services" },
 };
 
 export default function ServicesPage() {

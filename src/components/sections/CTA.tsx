@@ -8,7 +8,7 @@ export function CTA() {
     <section
       id="cta"
       className="relative py-36 md:py-52 overflow-hidden"
-      aria-label="Get started with Mersomo"
+      aria-label="Get started with Harnes 24/7"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
