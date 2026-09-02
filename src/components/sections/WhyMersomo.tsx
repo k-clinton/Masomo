@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const differentiators = [
   {
     number: "01",
-    title: "Expert-matched tutors",
+    title: "Expert matched tutors",
     description:
       "Every student is paired with a specialist who has direct experience in their subject area and academic level.",
   },
@@ -13,19 +13,19 @@ const differentiators = [
     number: "02",
     title: "Personalised pathways",
     description:
-      "We design bespoke learning plans around each student's goals, timeline, and learning style — not a one-size template.",
+      "We design bespoke learning plans around each student's goals, timeline, and learning style not a one-size template.",
   },
   {
     number: "03",
     title: "Results you can measure",
     description:
-      "Clear milestones, regular feedback, and transparent progress reports so students — and parents — always know where they stand.",
+      "Clear milestones, regular feedback, and transparent progress reports so students and parents always know where they stand.",
   },
   {
     number: "04",
     title: "A network that cares",
     description:
-      "We are academics, educators, and mentors who are genuinely invested in the long-term success of every student we support.",
+      "We are academics, educators, and mentors who are genuinely invested in the long term success of every student we support.",
   },
 ];
 
@@ -34,13 +34,13 @@ export function WhyMersomo() {
     <section
       id="why-mersomo"
       className="py-28 md:py-40 px-6 md:px-10 xl:px-16 bg-background border-t border-black/[0.04]"
-      aria-label="Why Mersomo"
+      aria-label="Why Harnes 24/7"
     >
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="max-w-2xl mb-20 md:mb-28">
           <Reveal>
-            <SectionLabel>Why Mersomo</SectionLabel>
+            <SectionLabel>Why Harnes 24/7</SectionLabel>
           </Reveal>
           <Reveal delay={0.1}>
             <SectionHeading>
