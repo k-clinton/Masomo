@@ -7,8 +7,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Mersomo. Tell us about your academic goals and we will design a programme tailored to you.",
-  alternates: { canonical: "https://mersomo.com/contact" },
+    "Get in touch with Harnes 24/7. Tell us about your academic goals and we will design a programme tailored to you.",
+  alternates: { canonical: "https://harnes247.com/contact" },
 };
 
 export default function ContactPage() {

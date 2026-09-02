@@ -132,7 +132,7 @@ export function Services() {
                 >
                   <Image
                     src={serviceImages[activeId]}
-                    alt={`${services.find((s) => s.id === activeId)?.name} — Mersomo service`}
+                    alt={`${services.find((s) => s.id === activeId)?.name} — Harnes 24/7 service`}
                     fill
                     sizes="420px"
                     className="object-cover"

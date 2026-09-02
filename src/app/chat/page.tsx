@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Chat with Us",
   description:
-    "Speak directly with a Mersomo academic advisor. Get immediate help with tutoring, syllabus planning, or pricing options.",
+    "Speak directly with a Harnes 24/7 academic advisor. Get immediate help with tutoring, syllabus planning, or pricing options.",
   robots: {
     index: false,
     follow: true,

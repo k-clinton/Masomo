@@ -123,7 +123,7 @@ export function Footer() {
               href={siteConfig.socials.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Mersomo on X"
+              aria-label="Harnes 24/7 on X"
               className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <XIcon size={16} />
@@ -132,7 +132,7 @@ export function Footer() {
               href={siteConfig.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Mersomo on LinkedIn"
+              aria-label="Harnes 24/7 on LinkedIn"
               className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <LinkedinIcon size={16} />
@@ -141,7 +141,7 @@ export function Footer() {
               href={siteConfig.socials.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Mersomo on Instagram"
+              aria-label="Harnes 24/7 on Instagram"
               className="text-foreground/45 hover:text-foreground transition-colors duration-200"
             >
               <InstagramIcon size={16} />

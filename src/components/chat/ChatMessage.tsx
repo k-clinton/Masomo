@@ -32,7 +32,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
       >
         {/* Sender Label */}
         <span className="block text-[10px] uppercase tracking-wider text-[#c5a059] font-semibold mb-1">
-          {isVisitor ? "You" : "Mersomo Advisor"}
+          {isVisitor ? "You" : "Harnes 24/7 Advisor"}
         </span>
 
         {/* Message Text */}

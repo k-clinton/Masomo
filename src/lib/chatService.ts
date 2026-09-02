@@ -14,7 +14,7 @@ export const SUGGESTED_PROMPTS = [
 export const WELCOME_MESSAGE = {
   id: "welcome",
   sender: "assistant" as const,
-  text: "Hello! Welcome to Mersomo. I can assist you with any questions regarding our premium academic tutoring, essay writing support, exam preparation, or dissertation guidance. How can I help you today?",
+  text: "Hello! Welcome to Harnes 24/7. I can assist you with any questions regarding our premium academic tutoring, essay writing support, exam preparation, or dissertation guidance. How can I help you today?",
   timestamp: new Date(),
 };
 

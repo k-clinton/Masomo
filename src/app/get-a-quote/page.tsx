@@ -7,8 +7,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Get a Quote",
   description:
-    "Calculate your premium academic support program cost instantly. Tailored tutoring, essays, and online class assistance quotes from Mersomo.",
-  alternates: { canonical: "https://mersomo.com/get-a-quote" },
+    "Calculate your premium academic support program cost instantly. Tailored tutoring, essays, and online class assistance quotes from Harnes 24/7.",
+  alternates: { canonical: "https://harnes247.com/get-a-quote" },
 };
 
 export default function GetAQuotePage() {
