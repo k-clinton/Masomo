@@ -35,7 +35,7 @@ export function Hero() {
     <section
       ref={ref}
       className="relative h-screen min-h-[680px] max-h-[1100px] flex items-end overflow-hidden dark"
-      aria-label="Hero — Mersomo Premium Academic Support"
+      aria-label="Hero Harnes 24/7 Premium Academic Support"
     >
       {/* Background image with parallax */}
       <motion.div
@@ -44,7 +44,7 @@ export function Hero() {
       >
         <Image
           src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1800&q=80&auto=format&fit=crop"
-          alt="Student studying in a beautiful library — Mersomo academic support"
+          alt="Student studying in a beautiful library Harnes 24/7 Premium Academic Support"
           fill
           priority
           sizes="100vw"
@@ -67,7 +67,7 @@ export function Hero() {
           variants={itemVariants}
           className="text-xs font-medium tracking-[0.25em] uppercase text-[#c5a059] mb-6"
         >
-          Premium Academic Support
+          Harnes 24/7 Premium Academic Support
         </motion.p>
 
         <motion.h1
@@ -84,7 +84,7 @@ export function Hero() {
           variants={itemVariants}
           className="text-[clamp(16px,1.5vw,20px)] text-foreground/60 max-w-md leading-relaxed mb-10"
         >
-          Expert tutoring, essay support, and dissertation guidance — tailored
+          Expert tutoring, essay support, and dissertation guidance tailored
           to help every student reach their full potential.
         </motion.p>
 
