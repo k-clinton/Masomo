@@ -89,10 +89,11 @@ function ProjectCard({ project, images, aspectClass, wide }: ProjectCardProps) {
       <div className={`relative ${aspectClass} overflow-hidden`}>
         <Image
           src={images[project.id]}
-          alt={`${project.title} — Mersomo programme`}
+          alt={`${project.title} Harnes 24/7 programme`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-[#0a0a0a]/20 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
 
