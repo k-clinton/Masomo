@@ -21,7 +21,7 @@ export function About() {
               <div className="relative aspect-[4/5] w-full max-w-md">
                 <Image
                   src="https://res.cloudinary.com/dyysl5jbc/image/upload/v1787996101/Mersomo-LLC-Image_bsndlb.jpg"
-                  alt="Student writing at desk — focused academic work"
+                  alt="Student writing at desk focused academic work"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -45,7 +45,7 @@ export function About() {
           {/* Right: Content */}
           <div className="order-1 lg:order-2">
             <Reveal>
-              <SectionLabel>About Mersomo</SectionLabel>
+              <SectionLabel>About Harnes 24/7</SectionLabel>
             </Reveal>
 
             <Reveal delay={0.1}>
@@ -61,16 +61,16 @@ export function About() {
 
             <Reveal delay={0.2}>
               <p className="text-foreground/60 text-[17px] leading-relaxed mb-6 max-w-lg">
-                Mersomo is a premium academic support network connecting
+                Harnes 24/7 is a premium academic support network connecting
                 ambitious students with expert tutors and subject specialists.
-                We believe that every student — regardless of background or
-                circumstance — deserves access to the highest quality academic
+                We believe that every student, regardless of background or
+                circumstance deserves access to the highest quality academic
                 guidance.
               </p>
               <p className="text-foreground/50 text-[16px] leading-relaxed mb-10 max-w-lg">
                 From secondary school to postgraduate research, our tailored
                 approach ensures that every student we work with is empowered
-                to achieve — and exceed — their academic potential.
+                to achieve and exceed their academic potential.
               </p>
             </Reveal>
 
