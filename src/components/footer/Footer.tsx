@@ -43,7 +43,7 @@ export function Footer() {
               href="/"
               className="font-serif text-2xl text-foreground hover:text-accent transition-colors duration-300 block mb-4"
             >
-              Mersomo
+              Harnes 24/7
             </Link>
             <p className="text-sm text-foreground/50 leading-relaxed max-w-xs">
               Premium academic support for students who want to
@@ -114,7 +114,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <p className="text-xs text-foreground/35">
-            &copy; {year} Mersomo. All rights reserved.
+            &copy; {year} Harnes 24/7. All rights reserved.
           </p>
 
           {/* Social links */}
