@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Mersomo — a premium academic support network dedicated to helping students achieve their full potential.",
+    "Learn about Harnes 24/7, a premium academic support network dedicated to helping students achieve their full potential.",
   alternates: { canonical: "https://mersomo.com/about" },
 };
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="relative py-28 md:py-40 px-6 md:px-10 xl:px-16 border-b border-black/[0.06]">
         <div className="max-w-[1400px] mx-auto">
           <Reveal>
-            <SectionLabel>About Mersomo</SectionLabel>
+            <SectionLabel>About Harnes 24/7</SectionLabel>
           </Reveal>
           <Reveal delay={0.1}>
             <SectionHeading size="xl" className="max-w-3xl mb-8">
@@ -31,7 +31,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-[18px] text-foreground/60 max-w-2xl leading-relaxed">
-              Mersomo is a premium academic support network connecting ambitious
+              Harnes 24/7 is a premium academic support network connecting ambitious
               students with expert tutors and subject specialists across all
               levels of education.
             </p>
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5] max-w-lg">
               <Image
                 src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=900&q=80&auto=format&fit=crop"
-                alt="Premium library — Mersomo's commitment to academic excellence"
+                alt="Premium library, Harnes 24/7's commitment to academic excellence"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -67,8 +67,8 @@ export default function AboutPage() {
             <Reveal delay={0.2}>
               <div className="space-y-5 text-[16px] text-foreground/60 leading-relaxed max-w-lg">
                 <p>
-                  We believe every student — regardless of background,
-                  institution, or prior attainment — deserves access to the
+                  We believe every student, regardless of background,
+                  institution, or prior attainment deserves access to the
                   highest quality academic guidance. Mersomo was founded to make
                   that belief a reality.
                 </p>
@@ -106,9 +106,9 @@ export default function AboutPage() {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             {[
-              { title: "Rigour", body: "We hold every programme to high academic standards — because your goals deserve more than a surface-level response." },
+              { title: "Rigour", body: "We hold every programme to high academic standards because your goals deserve more than a surface-level response." },
               { title: "Personalisation", body: "No two students are the same. Every learning plan is built specifically around individual needs, goals, and timelines." },
-              { title: "Accountability", body: "Clear milestones, honest feedback, and transparent progress reporting — always." },
+              { title: "Accountability", body: "Clear milestones, honest feedback, and transparent progress reporting always." },
             ].map((v, i) => (
               <Reveal key={v.title} delay={i * 0.1}>
                 <h3 className="font-serif text-[28px] font-normal text-foreground mb-4">{v.title}</h3>
