@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     default: "Harnes 24/7 | Premium Academic Support",
     template: "%s | Harnes 24/7",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   description:
     "Harnes 24/7 provides premium academic tutoring, essay support, dissertation guidance, and exam preparation for ambitious students at every level.",
   metadataBase: new URL("https://harnes247.com"),
