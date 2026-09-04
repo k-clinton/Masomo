@@ -311,7 +311,13 @@ export function QuoteFlow() {
 
   // Active steps count based on condition filters
   const visibleSteps = steps.filter((s) => s.check(state));
-  const activeStepIdx = visibleSteps.findIndex((s) => s.id === steps[stepIdx].id);
+  const currentStep = steps[stepIdx];
+
+  if (!currentStep) {
+    return null;
+  }
+
+  const activeStepIdx = visibleSteps.findIndex((s) => s.id === currentStep.id);
 
   const handleNext = () => {
     const error = steps[stepIdx].validate();
@@ -358,8 +364,6 @@ export function QuoteFlow() {
       setMockFileName(e.target.files[0].name);
     }
   };
-
-  const currentStep = steps[stepIdx];
 
   const inputClass =
     "w-full bg-transparent border-b border-foreground/10 focus:border-accent outline-none py-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-300 font-sans";
@@ -409,6 +413,8 @@ export function QuoteFlow() {
               nextLabel={
                 stepIdx === steps.length - 2
                   ? "Continue to Request"
+                  : currentStep.id === "summary"
+                  ? "Continue to Negotiation"
                   : stepIdx === steps.length - 1
                   ? "Submit"
                   : "Next"
@@ -1111,8 +1117,6 @@ export function QuoteFlow() {
               {currentStep.id === "contact" && (
                 <QuoteForm
                   state={state}
-                  updateState={updateState}
-                  onSubmitSuccess={() => setStepIdx(steps.length)} // Go to custom success step
                 />
               )}
             </QuoteStep>
