@@ -106,7 +106,7 @@ export default function AboutPage() {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             {[
-              { title: "Rigour", body: "We hold every programme to high academic standards because your goals deserve more than a surface-level response." },
+              { title: "Rigour", body: "We hold every programme to high academic standards because your goals deserve more than a surface level response." },
               { title: "Personalisation", body: "No two students are the same. Every learning plan is built specifically around individual needs, goals, and timelines." },
               { title: "Accountability", body: "Clear milestones, honest feedback, and transparent progress reporting always." },
             ].map((v, i) => (
