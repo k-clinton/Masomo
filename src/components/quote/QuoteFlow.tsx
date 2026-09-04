@@ -404,6 +404,7 @@ export function QuoteFlow() {
               description={currentStep.description}
               onNext={handleNext}
               onBack={stepIdx > 0 && stepIdx < steps.length - 1 ? handleBack : undefined}
+              showActions={currentStep.id !== "contact"}
               canNext={!currentStep.validate()}
               nextLabel={
                 stepIdx === steps.length - 2
