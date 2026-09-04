@@ -5,7 +5,7 @@ export const siteConfig = {
   ogImage: "https://harnes247.com/og.jpg",
   contact: {
     email: "info@harnes247.com",
-    phone: "+1 (307) 429-3840",
+    phone: "+254793995142",
     location: "Global Academic Network",
   },
   socials: {
