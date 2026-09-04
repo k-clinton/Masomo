@@ -9,7 +9,7 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Explore Harnes 24/7's selected programmes and case studies — from Oxford preparation to postgraduate dissertation support.",
+    "Explore Harnes 24/7's selected programmes and case studies from Oxford preparation to postgraduate dissertation support.",
   alternates: { canonical: "https://harnes247.com/work" },
 };
 
