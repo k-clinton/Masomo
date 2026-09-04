@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site";
 export interface ContactEmailData {
   name: string;
   email: string;
+  phone?: string;
   company: string;
   service: string;
   message: string;
@@ -36,6 +37,7 @@ export function createContactEmail(data: ContactEmailData) {
   });
   const safeName = escapeHtml(data.name);
   const safeEmail = escapeHtml(data.email);
+  const safePhone = data.phone ? escapeHtml(data.phone) : "";
   const safeCompany = escapeHtml(data.company);
   const safeService = escapeHtml(data.service);
   const safeMessage = formatMessage(data.message);
@@ -53,6 +55,7 @@ export function createContactEmail(data: ContactEmailData) {
             <table role="presentation" style="width:100%;border-collapse:collapse;font-size:14px;">
               <tr><td style="padding:0 0 14px;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;width:38%;">Name</td><td style="padding:0 0 14px;">${safeName}</td></tr>
               <tr><td style="padding:0 0 14px;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Email</td><td style="padding:0 0 14px;"><a href="mailto:${safeEmail}" style="color:#8c651e;">${safeEmail}</a></td></tr>
+              ${data.phone ? `<tr><td style="padding:0 0 14px;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Phone</td><td style="padding:0 0 14px;">${safePhone}</td></tr>` : ""}
               ${data.company ? `<tr><td style="padding:0 0 14px;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">School / Institution</td><td style="padding:0 0 14px;">${safeCompany}</td></tr>` : ""}
               ${data.service ? `<tr><td style="padding:0 0 14px;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Service</td><td style="padding:0 0 14px;">${safeService}</td></tr>` : ""}
               <tr><td style="padding:0;color:#777;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Submitted</td><td style="padding:0;">${submittedAt} UTC</td></tr>
@@ -71,6 +74,7 @@ export function createContactEmail(data: ContactEmailData) {
       "",
       `Name: ${data.name}`,
       `Email: ${data.email}`,
+      data.phone ? `Phone: ${data.phone}` : "",
       data.company ? `School / Institution: ${data.company}` : "",
       data.service ? `Service: ${data.service}` : "",
       `Submitted: ${submittedAt} UTC`,
