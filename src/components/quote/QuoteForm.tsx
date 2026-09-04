@@ -5,11 +5,9 @@ import { QuoteState } from "@/lib/pricing";
 
 interface QuoteFormProps {
   state: QuoteState;
-  updateState: (fields: Partial<QuoteState>) => void;
-  onSubmitSuccess: () => void;
 }
 
-export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProps) {
+export function QuoteForm({ state }: QuoteFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -30,9 +28,7 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
       tempErrors.email = "Please enter a valid email address.";
     }
 
-    if (!phone.trim()) {
-      tempErrors.phone = "Phone number is required.";
-    } else if (!/^\+?[\d\s-]{7,15}$/.test(phone)) {
+    if (phone.trim() && !/^\+?[\d\s-]{7,15}$/.test(phone)) {
       tempErrors.phone = "Please enter a valid phone number (including country code).";
     }
 
@@ -76,7 +72,6 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
       }
 
       setSuccess(true);
-      onSubmitSuccess();
     } catch (error) {
       setErrorMsg(error instanceof Error ? error.message : "Something went wrong during submission. Please try again.");
     } finally {
@@ -92,7 +87,7 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
           Request Received
         </h3>
         <p className="text-sm md:text-base text-foreground/85 max-w-sm leading-relaxed mb-6 font-sans font-medium">
-          Thank you, <strong className="text-foreground">{name}</strong>. We have received your quote details and will review them shortly. An academic coordinator will contact you at <strong className="text-foreground">{email}</strong> or <strong className="text-foreground">{phone}</strong> within one business day.
+          Thank you, <strong className="text-foreground">{name}</strong>. We have received your quote details and will review them shortly. An academic coordinator will contact you at <strong className="text-foreground">{email}</strong>{phone ? <> or <strong className="text-foreground">{phone}</strong></> : null} within one business day.
         </p>
         <div className="bg-[#fafaf6] dark:bg-[#1a1a1a] p-4 text-xs uppercase tracking-wider text-foreground/80 border border-foreground/15 font-sans font-semibold">
           No upfront fees. Guarantee A or B.
@@ -161,7 +156,7 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
       {/* Phone */}
       <div>
         <label htmlFor="quote-phone" className="text-xs tracking-wider uppercase text-foreground/85 font-semibold block mb-2 font-sans">
-          Phone Number *
+          Phone Number <span className="normal-case tracking-normal text-foreground/50">(Optional)</span>
         </label>
         <input
           id="quote-phone"
@@ -172,7 +167,6 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
           className={inputClass}
           aria-invalid={!!errors.phone}
           aria-describedby={errors.phone ? "quote-phone-error" : undefined}
-          required
         />
         {errors.phone && (
           <p id="quote-phone-error" className="text-xs text-red-500 font-semibold mt-1.5" role="alert">
