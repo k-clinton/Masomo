@@ -24,7 +24,7 @@ export function ChatLauncher() {
           className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40"
         >
           <a
-            href="https://wa.me/254793995142"
+            href="https://wa.me/254793995142?text=Hello%20Harnes%2024%2F7%2C%20I%E2%80%99m%20interested%20in%20your%20services%20and%20would%20like%20to%20learn%20more.%20Could%20you%20please%20assist%20me%20with%20my%20inquiry%3F"
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center gap-2.5 bg-accent hover:bg-accent-hover text-accent-foreground h-12 md:h-14 px-4 md:px-6 shadow-xl border border-accent/20 transition-all duration-300 rounded-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent group"
