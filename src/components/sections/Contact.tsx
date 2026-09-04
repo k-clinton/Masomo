@@ -14,6 +14,7 @@ interface FormData {
   company: string;
   service: string;
   message: string;
+  website: string;
 }
 
 const serviceOptions = [
@@ -32,10 +33,12 @@ export function Contact() {
     company: "",
     service: "",
     message: "",
+    website: "",
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const validate = (): boolean => {
     const newErrors: Partial<FormData> = {};
@@ -64,10 +67,24 @@ export function Contact() {
     e.preventDefault();
     if (!validate()) return;
     setSubmitting(true);
-    // Placeholder: integrate with email service or API
-    await new Promise((res) => setTimeout(res, 1000));
-    setSubmitting(false);
-    setSubmitted(true);
+    setSubmitError("");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = (await response.json()) as { error?: string; success?: boolean };
+      if (!response.ok || !result.success) {
+        setSubmitError(result.error || "We could not send your enquiry. Please try again.");
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setSubmitError("We could not send your enquiry right now. Please try again shortly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -146,7 +163,7 @@ export function Contact() {
           {/* Right: Form */}
           <Reveal delay={0.15} direction="left">
             {submitted ? (
-              <div className="flex flex-col items-start justify-center h-full min-h-[400px]">
+              <div className="flex flex-col items-start justify-center h-full min-h-[400px]" role="status" aria-live="polite">
                 <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#c5a059] mb-4">
                   Message Received
                 </p>
@@ -165,6 +182,18 @@ export function Contact() {
                 className="space-y-8"
                 aria-label="Contact form"
               >
+                <div className="absolute -left-[9999px]" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={handleChange}
+                  />
+                </div>
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 block mb-2">
@@ -282,11 +311,17 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
+                  aria-busy={submitting}
                   className="inline-flex items-center gap-2 bg-[#c5a059] hover:bg-[#b38d47] disabled:opacity-60 text-[#0a0a0a] font-medium text-sm px-7 py-3.5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5a059]"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                   <Send size={14} />
                 </button>
+                {submitError && (
+                  <p role="alert" aria-live="assertive" className="text-xs text-red-400">
+                    {submitError}
+                  </p>
+                )}
               </form>
             )}
           </Reveal>
