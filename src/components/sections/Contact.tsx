@@ -149,7 +149,7 @@ export function Contact() {
                     Speak with us directly and get help with your project.
                   </p>
                   <a
-                    href="https://wa.me/254793995142"
+                    href="https://wa.me/254793995142?text=Hello%20Harnes%2024%2F7%2C%20I%E2%80%99m%20interested%20in%20your%20services%20and%20would%20like%20to%20learn%20more.%20Could%20you%20please%20assist%20me%20with%20my%20inquiry%3F"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 border border-foreground/20 hover:border-[#c5a059] text-foreground hover:text-[#c5a059] px-5 py-2.5 transition-all duration-300 text-xs font-semibold uppercase tracking-wider font-sans rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c5a059]"
