@@ -282,6 +282,13 @@ export function QuoteFlow() {
       validate: () => "",
     },
     {
+      id: "summary",
+      title: "Estimated Quote & Summary",
+      description: "Review your options and cost estimate below.",
+      check: (_s: QuoteState) => true,
+      validate: () => "",
+    },
+    {
       id: "negotiation",
       title: "Budget & Pricing Option",
       description: "Do you have a specific budget you would like to request negotiation for?",
@@ -292,13 +299,6 @@ export function QuoteFlow() {
         }
         return "";
       },
-    },
-    {
-      id: "summary",
-      title: "Estimated Quote & Summary",
-      description: "Review your options and cost estimate below.",
-      check: (_s: QuoteState) => true,
-      validate: () => "",
     },
     {
       id: "contact",
