@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact email setup
+
+Copy `.env.example` to `.env.local` and set `RESEND_API_KEY` plus `HARNES_FROM_EMAIL`. The Resend key is read only by the server-side `/api/contact` route and must never use a `NEXT_PUBLIC_` prefix.
+
+`HARNES_FROM_EMAIL` must be a sender address on a domain verified in Resend. For local testing, Resend's `onboarding@resend.dev` sender can deliver to the email address associated with your Resend account. Set `HARNES_CONTACT_EMAIL` to that address temporarily. In production, remove `HARNES_CONTACT_EMAIL` and set the verified sender; enquiries will then go to the business address in `src/data/site.ts` and use the visitor email as `Reply-To`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
