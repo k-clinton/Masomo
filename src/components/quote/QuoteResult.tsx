@@ -74,8 +74,11 @@ export function QuoteResult({ state }: QuoteResultProps) {
           Estimated Project Cost
         </span>
         <h2 className="font-serif text-[clamp(28px,4vw,44px)] font-normal text-foreground leading-none mb-3">
-          KSh {result.rangeMinKSh.toLocaleString()} – KSh {result.rangeMaxKSh.toLocaleString()}
+          ${Math.round(result.totalUSD * 0.9).toLocaleString()} – ${Math.round(result.totalUSD * 1.15).toLocaleString()} USD
         </h2>
+        <p className="text-sm text-foreground/60 font-sans mb-3">
+          KSh {result.rangeMinKSh.toLocaleString()} – KSh {result.rangeMaxKSh.toLocaleString()}
+        </p>
         <p className="text-xs text-foreground/50 font-sans max-w-md mx-auto leading-relaxed">
           Based on your course specification, this is the projected price range.
           Weekly installments are available at approximately <strong className="text-foreground">KSh {result.weeklyKSh.toLocaleString()}/week</strong>.
@@ -86,6 +89,12 @@ export function QuoteResult({ state }: QuoteResultProps) {
             Negotiation requested Proposed Budget: ${state.proposedBudget} USD
           </div>
         )}
+      </div>
+
+      <div className="border border-[#c5a059]/30 bg-[#c5a059]/[0.06] p-5 text-center">
+        <p className="text-sm text-foreground/80 leading-relaxed">
+          Have a different budget in mind? Continue to the next step to request a negotiation with our coordinator.
+        </p>
       </div>
 
       {/* Explanatory breakdown */}
