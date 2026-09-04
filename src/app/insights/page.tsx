@@ -29,7 +29,7 @@ export default function InsightsPage() {
           <Reveal delay={0.2}>
             <p className="text-[18px] text-foreground/60 max-w-2xl leading-relaxed">
               Guides, strategies, and insights from our network of academic
-              specialists — coming soon.
+              specialists, coming soon.
             </p>
           </Reveal>
         </div>
