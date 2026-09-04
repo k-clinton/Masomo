@@ -11,6 +11,7 @@ interface QuoteStepProps {
   nextLabel?: string;
   children: React.ReactNode;
   errorMessage?: string;
+  showActions?: boolean;
 }
 
 export function QuoteStep({
@@ -22,6 +23,7 @@ export function QuoteStep({
   nextLabel = "Next",
   children,
   errorMessage,
+  showActions = true,
 }: QuoteStepProps) {
   // Allow advancing with Enter key (if active focus isn't textarea/button)
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -63,7 +65,7 @@ export function QuoteStep({
       )}
 
       {/* Actions */}
-      <div className="flex items-center justify-between border-t border-foreground/15 pt-6 mt-auto">
+      {showActions && <div className="flex items-center justify-between border-t border-foreground/15 pt-6 mt-auto">
         {onBack ? (
           <Button
             type="button"
@@ -88,7 +90,7 @@ export function QuoteStep({
           {nextLabel}
           <ArrowRight size={12} />
         </Button>
-      </div>
+      </div>}
     </div>
   );
 }
