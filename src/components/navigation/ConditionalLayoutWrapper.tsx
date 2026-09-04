@@ -17,8 +17,8 @@ export function ConditionalLayoutWrapper({
 }: ConditionalLayoutWrapperProps) {
   const pathname = usePathname();
   
-  // Hide navbar, footer, and chat launcher on chat and get-a-quote pages
-  const isStandalonePage = pathname === "/chat" || pathname === "/get-a-quote";
+  // Hide navbar, footer, and chat launcher on the get-a-quote flow
+  const isStandalonePage = pathname === "/get-a-quote";
 
   if (isStandalonePage) {
     return <>{children}</>;
