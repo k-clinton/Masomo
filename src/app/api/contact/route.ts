@@ -6,6 +6,7 @@ export const runtime = "nodejs";
 const MAX_LENGTHS = {
   name: 120,
   email: 254,
+  phone: 30,
   company: 160,
   service: 100,
   message: 5000,
@@ -18,8 +19,10 @@ const serviceOptions = new Set([
   "Dissertation & Thesis",
   "Exam Preparation",
   "Academic Language Support",
+  "Quote Request",
   "Other",
 ]);
+const phonePattern = /^\+?[\d\s().-]{7,30}$/;
 const rateLimit = new Map<string, number>();
 const RATE_LIMIT_WINDOW = 10 * 60 * 1000;
 
@@ -63,6 +66,7 @@ export async function POST(request: Request) {
 
   const name = cleanText(body.name);
   const email = cleanText(body.email).toLowerCase();
+  const phone = cleanText(body.phone);
   const company = cleanText(body.company);
   const service = cleanText(body.service);
   const message = cleanText(body.message);
@@ -73,10 +77,12 @@ export async function POST(request: Request) {
     !message ||
     name.length > MAX_LENGTHS.name ||
     email.length > MAX_LENGTHS.email ||
+    phone.length > MAX_LENGTHS.phone ||
     company.length > MAX_LENGTHS.company ||
     service.length > MAX_LENGTHS.service ||
     message.length > MAX_LENGTHS.message ||
     !emailPattern.test(email) ||
+    (phone.length > 0 && !phonePattern.test(phone)) ||
     (service.length > 0 && !serviceOptions.has(service))
   ) {
     return NextResponse.json(
@@ -89,6 +95,7 @@ export async function POST(request: Request) {
     await sendContactEmail({
       name,
       email,
+      phone,
       company,
       service,
       message,
