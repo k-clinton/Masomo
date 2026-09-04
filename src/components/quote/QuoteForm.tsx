@@ -48,13 +48,37 @@ export function QuoteForm({ state, updateState, onSubmitSuccess }: QuoteFormProp
     setErrorMsg("");
 
     try {
-      // Simulate API submission
-      await new Promise((resolve) => setTimeout(resolve, 1200));
+      const quoteDetails = [
+        `Course: ${state.courseName || "Not specified"}`,
+        `Subject: ${state.subject}`,
+        `Education level: ${state.educationLevel}`,
+        `Service: ${state.serviceType}`,
+        `Duration: ${state.durationWeeks} weeks`,
+        `Negotiation requested: ${state.negotiationRequested ? "Yes" : "No"}`,
+        state.proposedBudget ? `Proposed budget: $${state.proposedBudget} USD` : "",
+        description.trim() ? `Additional details: ${description.trim()}` : "",
+      ].filter(Boolean).join("\n");
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          service: "Quote Request",
+          message: quoteDetails,
+        }),
+      });
+      const result = (await response.json()) as { error?: string; success?: boolean };
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Unable to send quote request.");
+      }
 
       setSuccess(true);
       onSubmitSuccess();
-    } catch (err) {
-      setErrorMsg("Something went wrong during submission. Please try again.");
+    } catch (error) {
+      setErrorMsg(error instanceof Error ? error.message : "Something went wrong during submission. Please try again.");
     } finally {
       setLoading(false);
     }
