@@ -35,7 +35,30 @@ const sections = [
   {
     title: "Cookies and analytics",
     body: [
-      "The website may use essential cookies or similar technologies to support core functionality, remember preferences, and understand website performance. You can control cookies through your browser settings, although disabling them may affect some features.",
+      "Cookies are small files or similar technologies stored on your device. Harnes 24/7 may use essential cookies to support core functionality, remember preferences, maintain security, and understand website performance. We do not use cookies to sell your personal information.",
+      "You can control or delete cookies through your browser settings. Blocking essential cookies may affect some website features. If we introduce analytics, advertising, or other non-essential tracking technologies, we will update this policy and provide any controls required by applicable law.",
+    ],
+  },
+  {
+    title: "Information security",
+    body: [
+      "We use reasonable administrative, technical, and organizational safeguards to protect personal information against unauthorized access, alteration, loss, misuse, or disclosure. Access to personal information should be limited to people and providers who need it for legitimate business purposes.",
+      "When contacting us, take reasonable care with sensitive information. Check the recipient before sending documents, avoid putting confidential details in email subject lines, use secure networks and updated devices, and do not share passwords or access credentials. Please report suspected security or privacy incidents to us promptly.",
+      "No electronic transmission or storage system is completely secure. We cannot guarantee that information will never be accessed, disclosed, altered, or destroyed despite reasonable safeguards.",
+    ],
+  },
+  {
+    title: "Payments, refunds, and service records",
+    body: [
+      "If you request a paid service, we may process information needed to prepare an invoice, confirm a payment, provide the service, or respond to a refund request. Payment details may be handled by the payment provider used for the transaction; Harnes 24/7 does not need to retain full payment-card credentials in order to respond to an enquiry.",
+      "Any refund, cancellation, or service adjustment is handled according to the applicable service agreement, quotation, and the circumstances of the request. We may retain communications, transaction references, and supporting records as needed to review and resolve the request and meet legal or accounting obligations.",
+    ],
+  },
+  {
+    title: "Website and third-party content disclaimer",
+    body: [
+      "The information on this website is provided for general educational and informational purposes. We aim to keep it accurate and useful, but we do not guarantee that every item is complete, current, or suitable for every situation. Your reliance on website content is your responsibility, and service estimates remain preliminary until confirmed by Harnes 24/7.",
+      "The website may link to third-party websites or services, including communication providers such as WhatsApp and email or payment providers. We do not control their content, availability, security, or privacy practices. Review their own policies before sharing information or completing a transaction with them.",
     ],
   },
   {
