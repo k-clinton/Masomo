@@ -124,8 +124,8 @@ export function QuoteSummary({ state, onEditStep }: QuoteSummaryProps) {
             Negotiation & Budget
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
-            {renderItem("Negotiation Requested", state.negotiationRequested, 13)}
-            {state.negotiationRequested && state.proposedBudget && renderItem("Proposed Budget", `$${state.proposedBudget} USD`, 13)}
+            {renderItem("Negotiation Requested", state.negotiationRequested, 14)}
+            {state.negotiationRequested && state.proposedBudget && renderItem("Proposed Budget", `$${state.proposedBudget} USD`, 14)}
           </div>
         </div>
       )}
