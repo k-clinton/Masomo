@@ -104,16 +104,10 @@ export async function POST(request: Request) {
     rateLimit.set(address, Date.now());
     return NextResponse.json({ success: true });
   } catch (error) {
-  console.error("Contact email delivery failed", error);
-
-  return NextResponse.json(
-    {
-      error:
-        error instanceof Error
-          ? error.message
-          : "Unknown email delivery error",
-    },
-    { status: 500 },
-  );
-}
+    console.error("Contact email delivery failed", error);
+    return NextResponse.json(
+      { error: "We could not send your enquiry right now. Please try again shortly." },
+      { status: 502 },
+    );
+  }
 }
