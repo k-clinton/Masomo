@@ -146,7 +146,7 @@ export function Contact() {
                     Have a question?
                   </h4>
                   <p className="text-sm text-foreground/50 leading-relaxed max-w-xs mb-5 font-sans">
-                    Speak with us directly and get help with your project.
+                    Speak with us directly via whatsapp and get help with your project.
                   </p>
                   <a
                     href="https://wa.me/254793995142?text=Hello%20Harnes%2024%2F7%2C%20I%E2%80%99m%20interested%20in%20your%20services%20and%20would%20like%20to%20learn%20more.%20Could%20you%20please%20assist%20me%20with%20my%20inquiry%3F"
