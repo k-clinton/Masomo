@@ -19,32 +19,42 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://harnes247.com"),
+
   title: {
-    default: "Harnes 24/7 | Premium Academic Support",
+    default: "Harnes 24/7 | Academic Support & Writing Assistance",
     template: "%s | Harnes 24/7",
   },
+
+  description:
+    "Harnes 24/7 offers academic support, writing assistance, tutoring, research guidance, proofreading, dissertation support, and exam preparation for students.",
+
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
   },
-  description:
-    "Harnes 24/7 provides premium academic tutoring, essay support, dissertation guidance, and exam preparation for ambitious students at every level.",
-  metadataBase: new URL("https://harnes247.com"),
+
+  alternates: {
+    canonical: "https://harnes247.com/",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://harnes247.com",
+    url: "https://harnes247.com/",
     siteName: "Harnes 24/7",
-    title: "Harnes 24/7 | Premium Academic Support",
+    title: "Harnes 24/7 | Academic Support & Writing Assistance",
     description:
-      "Expert tutoring, essay support, and dissertation guidance tailored to help every student reach their full potential.",
+      "Academic support, writing assistance, tutoring, research guidance, proofreading, dissertation support, and exam preparation for students.",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Harnes 24/7 | Premium Academic Support",
+    title: "Harnes 24/7 | Academic Support & Writing Assistance",
     description:
-      "Expert tutoring, essay support, and dissertation guidance tailored to help every student reach their full potential.",
+      "Academic support, writing assistance, tutoring, research guidance, proofreading, dissertation support, and exam preparation for students.",
   },
+
   robots: {
     index: true,
     follow: true,
