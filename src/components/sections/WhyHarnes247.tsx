@@ -13,7 +13,7 @@ const differentiators = [
     number: "02",
     title: "Personalised pathways",
     description:
-      "We design bespoke learning plans around each student's goals, timeline, and learning style not a one-size template.",
+      "We design bespoke learning plans around each student's goals, timeline, and learning style not a one size template.",
   },
   {
     number: "03",
