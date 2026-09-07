@@ -21,7 +21,7 @@ export function About() {
               <div className="relative aspect-[4/5] w-full max-w-md">
                 <Image
                   src="https://res.cloudinary.com/dyysl5jbc/image/upload/v1787996101/Mersomo-LLC-Image_bsndlb.jpg"
-                  alt="Student writing at desk focused academic work"
+                  alt="Tutors and student in a one on one session giving the best academic assignment assistance"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -33,7 +33,7 @@ export function About() {
               <div className="absolute -bottom-8 -right-6 md:-right-12 w-48 md:w-64 aspect-[4/3] border-4 border-background">
                 <Image
                   src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80&auto=format&fit=crop"
-                  alt="Tutor and student in a one-on-one session"
+                  alt="Student writing at desk focused academic writing work"
                   fill
                   sizes="(max-width: 768px) 192px, 256px"
                   className="object-cover"

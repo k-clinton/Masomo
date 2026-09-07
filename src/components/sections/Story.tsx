@@ -54,7 +54,7 @@ export function Story() {
               <div className="relative aspect-[3/4] col-span-2">
                 <Image
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80&auto=format&fit=crop"
-                  alt="Students collaborating in a study session"
+                  alt="Students collaborating to give best academic assignment assistance"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -64,7 +64,7 @@ export function Story() {
               <div className="relative aspect-square">
                 <Image
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80&auto=format&fit=crop"
-                  alt="Tutor reviewing student work"
+                  alt="Tutor reviewing student academic writing work"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
@@ -74,7 +74,7 @@ export function Story() {
               <div className="relative aspect-square">
                 <Image
                   src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80&auto=format&fit=crop"
-                  alt="Student achieving academic success"
+                  alt="Student satisfied with academic success, coutesy of Harnes 24/7's academic support"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
