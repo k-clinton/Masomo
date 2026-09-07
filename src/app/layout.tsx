@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     siteName: "Harnes 24/7",
     title: "Harnes 24/7 | Premium Academic Support",
     description:
-      "Expert tutoring, essay support, and dissertation guidance — tailored to help every student reach their full potential.",
+      "Expert tutoring, essay support, and dissertation guidance tailored to help every student reach their full potential.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Harnes 24/7 | Premium Academic Support",
     description:
-      "Expert tutoring, essay support, and dissertation guidance — tailored to help every student reach their full potential.",
+      "Expert tutoring, essay support, and dissertation guidance tailored to help every student reach their full potential.",
   },
   robots: {
     index: true,
