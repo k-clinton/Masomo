@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/footer/Footer";
 import { ChatLauncher } from "@/components/chat/ChatLauncher";
 import { ConditionalLayoutWrapper } from "@/components/navigation/ConditionalLayoutWrapper";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -79,6 +80,17 @@ export default function RootLayout({
         >
           {children}
         </ConditionalLayoutWrapper>
+      
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3RG18HK552"
+        />
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3RG18HK552');`}
+        </Script>
       </body>
     </html>
   );
