@@ -67,7 +67,7 @@ export function Services() {
                   className={`group py-8 cursor-pointer transition-all duration-300 ${
                     activeId === service.id
                       ? "opacity-100"
-                      : "opacity-40 hover:opacity-70"
+                      : "opacity-100 lg:opacity-40 lg:hover:opacity-70"
                   }`}
                   onMouseEnter={() => setActiveId(service.id)}
                   onClick={() => setActiveId(service.id)}
@@ -85,7 +85,7 @@ export function Services() {
                         <span className="text-xs font-medium tracking-[0.15em] text-[#c5a059]">
                           {service.number}
                         </span>
-                        <h3 className="font-serif text-[clamp(22px,2.5vw,32px)] font-normal text-foreground">
+                        <h3 className="font-serif text-[clamp(22px,2.5vw,32px)] font-normal text-[#1c1c1c]">
                           {service.name}
                         </h3>
                       </div>
@@ -104,9 +104,15 @@ export function Services() {
                         {service.description}
                       </p>
                     </div>
+                    <span
+                      aria-hidden="true"
+                      className="mt-1 flex-shrink-0 text-2xl font-light leading-none text-[#1c1c1c] lg:hidden"
+                    >
+                      {activeId === service.id ? "×" : "+"}
+                    </span>
                     <ArrowRight
                       size={16}
-                      className={`mt-2 flex-shrink-0 transition-all duration-300 ${
+                      className={`mt-2 hidden flex-shrink-0 transition-all duration-300 lg:block ${
                         activeId === service.id
                           ? "text-[#c5a059] translate-x-0"
                           : "text-foreground/20 -translate-x-2"
