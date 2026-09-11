@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import { services } from "@/data/services";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTA } from "@/components/sections/CTA";
-import { ServicesList } from "@/components/services/ServicesList";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -40,7 +40,33 @@ export default function ServicesPage() {
       {/* Services list */}
       <section className="py-28 px-6 md:px-10 xl:px-16">
         <div className="max-w-[1400px] mx-auto">
-          <ServicesList />
+          <div className="divide-y divide-black/[0.06]">
+            {services.map((service, i) => (
+              <Reveal key={service.id} delay={i * 0.08}>
+                <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-8 md:gap-12 items-start">
+                  <span className="font-serif text-[clamp(40px,4vw,56px)] font-normal text-[#c5a059]/30 leading-none">
+                    {service.number}
+                  </span>
+                  <div>
+                    <h2 className="font-serif text-[clamp(24px,2.5vw,36px)] font-normal text-foreground mb-4">
+                      {service.name}
+                    </h2>
+                    <p className="text-sm text-foreground/50 leading-relaxed max-w-md">
+                      {service.description}
+                    </p>
+                  </div>
+                  <ul className="space-y-2">
+                    {service.details.map((detail) => (
+                      <li key={detail} className="flex items-start gap-3 text-sm text-foreground/50">
+                        <span className="w-1 h-1 rounded-full bg-[#c5a059] mt-2 flex-shrink-0" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
