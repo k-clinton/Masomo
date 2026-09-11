@@ -25,6 +25,20 @@ const serviceImages: Record<string, string> = {
 
 export function Services() {
   const [activeId, setActiveId] = useState<string>(services[0].id);
+  const [previousId, setPreviousId] = useState<string | null>(null);
+  const imageId = activeId ?? services[0].id;
+
+  const handleServiceClick = (serviceId: string) => {
+    if (serviceId === activeId) {
+      const restoreId = previousId ?? services[0].id;
+      setPreviousId(activeId);
+      setActiveId(restoreId);
+      return;
+    }
+
+    setPreviousId(activeId);
+    setActiveId(serviceId);
+  };
 
   return (
     <section
@@ -70,14 +84,17 @@ export function Services() {
                       : "opacity-100 lg:opacity-40 lg:hover:opacity-70"
                   }`}
                   onMouseEnter={() => setActiveId(service.id)}
-                  onClick={() => setActiveId(service.id)}
+                  onClick={() => handleServiceClick(service.id)}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ")
-                      setActiveId(service.id);
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleServiceClick(service.id);
+                    }
                   }}
                   aria-label={`View ${service.name} service`}
+                  aria-pressed={activeId === service.id}
                 >
                   <div className="flex items-start justify-between gap-6">
                     <div className="flex-1">
@@ -108,7 +125,11 @@ export function Services() {
                       aria-hidden="true"
                       layout
                       className="mt-1 flex-shrink-0 text-2xl font-light leading-none text-[#1c1c1c] lg:hidden"
-                      animate={{ rotate: activeId === service.id ? 45 : 0, scale: activeId === service.id ? 1.08 : 1 }}
+                      animate={
+                        activeId === service.id
+                          ? { rotate: 45, scale: 1.08 }
+                          : { rotate: 0, scale: 1 }
+                      }
                       transition={{ duration: 0.22, ease: "easeInOut" }}
                     >
                       {activeId === service.id ? "×" : "+"}
