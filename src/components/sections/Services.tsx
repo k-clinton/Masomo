@@ -26,7 +26,6 @@ const serviceImages: Record<string, string> = {
 export function Services() {
   const [activeId, setActiveId] = useState<string>(services[0].id);
   const [previousId, setPreviousId] = useState<string | null>(null);
-  const imageId = activeId ?? services[0].id;
 
   const handleServiceClick = (serviceId: string) => {
     if (serviceId === activeId) {
