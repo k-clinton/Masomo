@@ -104,12 +104,15 @@ export function Services() {
                         {service.description}
                       </p>
                     </div>
-                    <span
+                    <motion.span
                       aria-hidden="true"
+                      layout
                       className="mt-1 flex-shrink-0 text-2xl font-light leading-none text-[#1c1c1c] lg:hidden"
+                      animate={{ rotate: activeId === service.id ? 45 : 0, scale: activeId === service.id ? 1.08 : 1 }}
+                      transition={{ duration: 0.22, ease: "easeInOut" }}
                     >
                       {activeId === service.id ? "×" : "+"}
-                    </span>
+                    </motion.span>
                     <ArrowRight
                       size={16}
                       className={`mt-2 hidden flex-shrink-0 transition-all duration-300 lg:block ${
